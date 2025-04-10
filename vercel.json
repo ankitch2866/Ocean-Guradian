@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/", "destination": "/netflix.html" }
+    { "source": "/", "destination": "/loginpage.html
+" }
   ]
 }
