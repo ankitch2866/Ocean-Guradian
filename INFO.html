@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Life Conservation Blog</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #003366, #66ccff);
+            color: #003366;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #005580;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 1s ease-in-out;
+        }
+        #logo {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 200px; /* adjust the width to fit your logo */
+  height: auto;
+}
+
+        .blog-post {
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            transition: transform 0.3s;
+            transform: translateY(20px);
+        }
+
+        .blog-post.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-post h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .blog-post p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #005580;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            color: #ffcc00;
+        }
+        .login-container {
+    margin-left: auto;
+}
+
+.login-container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+footer {
+            color: #fff;
+            background: #094989;
+            text-align: center;
+            font-size: small;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="about.html">Home</a></li>
+                <li><a href="INFO.html">Blog</a></li>
+                <li><a href="Measuress.html">Measures</a></li>
+                <li><a href="FAQ.html">FAQs</a></li> 
+                <li><a href="about us.html">About us</a></li>
+            </ul>
+                <div class="login-container">
+                <a href="loginpage.html">Login</a>
+                </div>
+            </div>
+    </header>
+    <header>
+        <img id="logo" src="mainlogo.png" alt="Your Company Logo">
+      </header>
+    <div class="content">
+        <h1>Sea Life Conservation Blog</h1>
+        <div class="blog-post">
+            <img src="marine.jpg" alt="Ocean Image">
+            <h2>The Importance of Marine Protected Areas</h2>
+            <p>Marine protected areas (MPAs) are essential for the conservation of sea life. These areas provide a safe haven for marine species to thrive, free from human impacts such as overfishing and pollution.</p>
+            <p><a href="read more importance.html" class="read-more">Read More</a></p>
+        </div>
+        <div class="blog-post">
+            <img src="turtle.avif" alt="Sea Turtle Image">
+            <h2>The Plight of Sea Turtles</h2>
+            <p>Sea turtles have been on our planet for over 100 million years, but their populations are declining at an alarming rate. Habitat destruction, pollution, and hunting are just a few of the threats facing these incredible creatures.</p>
+            <p><a href="turtle read more.html" class="read-more">Read More</a></p>
+        </div>
+        <div class="blog-post">
+            <img src="coralf.webp" alt="Coral Reef Image">
+            <h2>The Devastating Impact of Climate Change on Coral Reefs</h2>
+            <p>Coral reefs are some of the most biodiverse ecosystems on the planet, but they are facing an unprecedented threat from climate change. Rising sea temperatures are causing coral bleaching, which can lead to the death of entire reefs.</p>
+            <p><a href="coral read more.html" class="read-more">Read More</a></p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const posts = document.querySelectorAll('.blog-post');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            posts.forEach(post => {
+                observer.observe(post);
+            });
+        });
+    </script>
+        <footer>
+            <p1>&copy; 2024 Ocean Guardian . All rights reserved.</p1>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif, sans-serif;
+      background-image:  linear-gradient(to bottom, #003366, #3fb3ed);
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login-form {
+      width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.425);
+      border: 1px solid #98cbec;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.475);
+      transform: translateY(-50%);
+      top: 50%;
+      position: relative;
+    }
+
+    .login-form h2 {
+      color: #00698f;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .login-form label {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 0 10px;
+    }
+
+    .login-form input[type="text"], .login-form input[type="password"] {
+      width: 95%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4c91afba;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .login-form input[type="submit"]:hover {
+      background-color: #3e8e419a;
+    }
+	footer {
+            color: #fff;
+            background: #094989;
+            text-align: center;
+            font-size: small;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            height: 30px;
+        }
+		#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px; 
+  height: auto;
+}
+  </style>
+</head>
+<body>
+	<header>
+		<img id="logo" src="mainlogo.png" alt="Your Company Logo">
+	  </header>
+  <div class="login-form">
+    <h2>Dive into your account</h2>
+    <form action="about.html" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+    <div id="login-status"></div>
+  </div>
+
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === 'admin' && password === 'password') {
+        document.getElementById('login-status').innerHTML = '<p style="color: green;">Login successful! You will be redirected to the home page.</p>';
+        setTimeout(() => {
+          window.location.href = 'about.html';
+        }, 2000);
+      } else {
+				document.getElementById('login-status').innerHTML = '<p style="color: red;">Invalid username or password.</p>';
+			}
+		});
+	</script>
+	    <footer>
+			<p1>&copy; 2024 Ocean Guardian . All rights reserved.</p1>
+		</footer>
+</body>
+</html>

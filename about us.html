@@ -1,0 +1,185 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Website About Us Page HTML CSS</title>
+    <style>
+      /* modified CSS code */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .about-us {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+      }
+
+      .video-background video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.625);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+      }
+
+      .text h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .text h5 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      span {
+        color: #34a85a;
+      }
+
+      .text p {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 1px;
+        color: #333;
+      }
+
+      .data {
+        margin-top: 30px;
+      }
+
+      header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #005580;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+        .login-container {
+            margin-left: auto;
+        }
+
+        .login-container a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        #logo {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  width: 200px; /* adjust the width to fit your logo */
+  height: auto;
+}
+footer {
+            color: #fff;
+            background: #094989;
+            text-align: center;
+            font-size: small;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            height: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="about.html">Home</a></li>
+                <li><a href="INFO.html">Blog</a></li>
+                <li><a href="Measuress.html">Measures</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about us.html">About us</a></li>
+            </ul>
+            <div class="login-container">
+                <a href="loginpage.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <header>
+        <img id="logo" src="mainlogo.png" alt="Project Logo">
+      </header>
+    <section class="about-us">
+      <div class="video-background">
+        <video autoplay loop muted>
+          <source src="shefeels.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="text">
+        <h2>About Us</h2>
+        <h5>Front-end Developer & <span>Designer</span></h5>
+        <p>This website was created by Team LEVELLERS during our internship with IBM SkillsBuild. We were tasked with building a website on the United Nations' Sustainable Development Goal (SDG) of Life Below Water. Our team members are Neemit Singh(Team Leader), Ankit Kumar Verma (Core), Ankit (core), and Rohit (Core). We applied the frontend development skills we gained during the internship to develop this site.</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p1>&copy; 2024 Ocean Guardian . All rights reserved.</p1>
+  </footer>
+  </body>
+</html>

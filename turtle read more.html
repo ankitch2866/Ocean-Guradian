@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Plight of Sea Turtles</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #003366, #66ccff);
+            color: #003366;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .navbar {
+            background-color: #005580;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.5em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .article {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            line-height: 1.6;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .article img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .article img:hover {
+            transform: scale(1.035);
+        }
+
+        .article p {
+            margin-bottom: 20px;
+        }
+
+        .article ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .back-link {
+            color: #005580;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .back-link:hover {
+            color: #ffcc00;
+        }
+        .login-container {
+    margin-left: auto;
+}
+        .login-container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="about.html">Home</a></li>
+                <li><a href="INFO.html">Blog</a></li>
+                <li><a href="measures.html">Measures</a></li>
+                <li><a href="FAQ.html">FAQs</a></li>
+                <li><a href="about us.html">About us</a></li>
+
+            </ul>
+            <div class="login-container">
+                <a href="loginpage.html">Login</a>
+                </div>
+        </div>
+    </header>
+    <main>
+        <h1>The Plight of Sea Turtles</h1>
+        <article class="article">
+            <img src="turtle.avif" alt="Sea Turtle Image">
+            <h2>Types of Sea Turtle Species:</h2><p>Sea turtles are some of the most ancient creatures on our planet, having been around for more than 100 million years. These marine reptiles are integral to the health of ocean ecosystems, playing vital roles that support the balance and biodiversity of marine life. These magnificent creatures come in seven distinct species, each playing a unique role in the ocean’s delicate balance.</p>
+            <ul>
+                <li><strong>Leatherback Turtle:</strong> The largest sea turtle species, crucial for controlling jellyfish populations.</li>
+                <li><strong>Green Turtle:</strong> Plays a key role in maintaining healthy seagrass beds.</li>
+                <li><strong>Hawksbill Turtle:</strong> Known for its beautiful shell, it is vital for the health of coral reefs.</li>
+                <li><strong>Loggerhead Turtle:</strong> Helps manage populations of hard-shelled prey.</li>
+                <li><strong>Olive Ridley Turtle:</strong> Noted for mass nesting events; primarily found in the Gulf of Mexico.</li>
+                <li><strong>Kemp's Ridley Turtle:</strong> Rare and mainly located in the Gulf of Mexico.</li>
+                <li><strong>Flatback Turtle:</strong> Native to Australia, important for maintaining local marine habitats.</li>
+            </ul>
+            <h2>Endangered Status and Conservation Efforts:</h2>
+            <p>Many sea turtle species are critically endangered due to a combination of human activities, including habitat destruction, climate change, pollution, and illegal trade. For instance, leatherbacks face severe threats from entanglement in fishing gear and ingestion of plastic debris. Similarly, hawksbill turtles are heavily impacted by the illegal trade of their beautiful shells.
+
+                Conservation efforts are crucial to reversing these trends. Initiatives include protecting nesting sites, reducing bycatch through improved fishing practices, and addressing climate change impacts. Organizations and volunteers around the world are working tirelessly to protect these ancient mariners, ensure their survival, and preserve the crucial roles they play in ocean ecosystems.</p>
+            <h2>Role in the Ocean:</h2>
+            <p>Sea turtles are not just survivors from the age of dinosaurs; they are active participants in maintaining the health of marine ecosystems. By controlling jellyfish populations, maintaining seagrass beds, and supporting coral reef health, sea turtles play pivotal roles in preserving the biodiversity and balance of our oceans. Their continued survival is vital for the future health of marine environments, making their conservation a global priority.</p>
+            <a href="INFO.html" class="back-link">Back to Blog</a>
+        </article>
+    </main>
+</body>
+</html>

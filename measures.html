@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Life Conservation Blog</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #003366, #66ccff);
+            color: #003366;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #005580;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .measure {
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            transition: transform 0.3s;
+            transform: translateY(20px);
+        }
+
+        .measure.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .measure:hover {
+            transform: scale(1.05);
+        }
+
+        .measure h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .measure img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .measure p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #005580;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            color: #ffcc00;
+        }
+        .login-container {
+    margin-left: auto;
+}
+        .login-container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+    </style>
+</head>
+<body>
+	<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="about.html">Home</a></li>
+            <li><a href="INFO.html">Blog</a></li>
+            <li><a href="measures.html">Measures</a></li>
+            <li><a href="FAQ.html">FAQs</a></li>
+        </ul>
+        <div class="login-container">
+            <a href="loginpage.html">Login</a>
+            </div>
+    </div>
+	</header>
+    <div class="content">
+        <h1 font="Monaco">UN Measures for Sea Life Conservation</h1>
+        <div class="measure">
+            <h2>Sustainable Development Goal 14: Life Below Water</h2>
+            <p>The United Nations has set a goal to conserve and sustainably use the oceans, seas, and marine resources for sustainable development. This goal aims to reduce marine pollution, protect marine biodiversity, and promote sustainable fishing practices.</p>
+            <p><a href="#" class="read-more">Read More</a></p>
+        </div>
+        <div class="measure">
+            <h2>UN Convention on the Law of the Sea (UNCLOS)</h2>
+			<p>The UNCLOS is an international treaty that sets out the legal framework for the use of the world's oceans. It aims to promote the conservation and sustainable use of marine resources, and to protect the marine environment.</p>
+			<p><a href="#" class="read-more">Read More</a></p>
+		</div>
+		<div class="measure">
+			<h2>UN Environment Programme (UNEP)</h2>
+			<p>The UNEP is a leading global environmental authority that sets the global environmental agenda. It works to address the environmental impacts of human activities on the oceans, including pollution, overfishing, and climate change.</p>
+			<p><a href="#" class="read-more">Read More</a></p>
+		</div>
+		<div class="measure">
+			<h2>Global Programme of Action for the Protection of the Marine Environment from Land-based Activities (GPA)</h2>
+			<p>The GPA is a global initiative that aims to reduce the impact of land-based activities on the marine environment. It focuses on reducing pollution from land-based sources, such as agricultural runoff and industrial waste.</p>
+			<p><a href="#" class="read-more">Read More</a></p>
+		</div>
+	</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const posts = document.querySelectorAll('.measure');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            posts.forEach(post => {
+                observer.observe(post);
+            });
+        });
+    </script>/*
+</body>
+</html>

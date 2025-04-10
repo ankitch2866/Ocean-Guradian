@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Life Conservation Blog</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #003366, #66ccff);
+            color: #003366;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: #005580;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .navbar {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3em;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #000000;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .blog-post {
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            transition: transform 0.3s;
+            transform: translateY(20px);
+        }
+
+        .blog-post.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .blog-post:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-post h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .blog-post p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #005580;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            color: #ffcc00;
+        }
+
+        .login-container {
+            margin-left: auto;
+        }
+
+        .login-container a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+
+        .faq-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    height: auto; /* Set the height to auto */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.faq-question {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    flex: 1;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+.faq-answer.visible {
+    display: block;
+    padding: 20px; /* Add more padding to make the answer box larger */
+    height: 150px; /* Set a fixed height for the answer box */
+}
+
+.expanded {
+    font-weight: bold;
+    color: #005580;
+}
+footer {
+            color: #fff;
+            background: #094989;
+            text-align: center;
+            font-size: small;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            height: 30px;
+        }
+        #logo {
+  position: fixed;
+  top: 10;
+  left: 0;
+  width: 200px; /* adjust the width to fit your logo */
+  height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="about.html">Home</a></li>
+                <li><a href="INFO.html">Blog</a></li>
+                <li><a href="Measuress.html">Measures</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about us.html">About us</a></li>
+
+            </ul>
+            <div class="login-container">
+                <a href="loginpage.html">Login</a>
+            </div>
+        </div>
+    </header>
+    <header>
+        <img id="logo" src="mainlogo.png" alt="Your Company Logo">
+      </header>
+    <div class="content">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is sea life conservation?</div>
+            <div class="faq-answer visible">Sea life conservation is the practice of protecting and preserving marine ecosystems and species from human impacts such as pollution, overfishing, and habitat destruction.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">Why is sea life conservation important?</div>
+            <div class="faq-answer visible">Sea life conservation is important because marine ecosystems provide essential services such as oxygen production, carbon sequestration, and food security. Additionally, marine species have the potential to provide new medicines and other benefits to humans.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What are some ways to get involved in sea life conservation?</div>
+            <div class="faq-answer visible">There are many ways to get involved in sea life conservation, including volunteering with local organizations, reducing plastic use, supporting sustainable seafood, and spreading awareness about the importance of marine conservation.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is the impact of climate change on sea life?</div>
+            <div class="faq-answer visible">Climate change is having a significant impact on sea life, including rising sea temperatures, ocean acidification, and changes in ocean circulation. These changes are affecting marine ecosystems and species, leading to coral bleaching, sea level rise, and other impacts.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">How can I support sea life conservation efforts?</div>
+            <div class="faq-answer visible">You can support sea life conservation efforts by donating to reputable organizations, spreading awareness about the importance of marine conservation, and making sustainable choices in your daily life.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is the United Nations' role in sea life conservation?</div>
+            <div class="faq-answer visible">The United Nations plays a crucial role in sea life conservation through its various agencies and programs, such as the United Nations Environment Programme (UNEP) and the Food and Agriculture Organization (FAO). These agencies work to promote sustainable fishing practices, protect marine habitats, and address the impacts of climate change on the ocean.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is the Sustainable Development Goal (SDG) 14?</div>
+            <div class="faq-answer visible">SDG 14 is one of the 17 Sustainable Development Goals adopted by the United Nations in 2015. It aims to conserve and sustainably use the world's oceans, seas, and marine resources for sustainable development.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is the International Maritime Organization (IMO) doing to reduce marine pollution?</div>
+            <div class="faq-answer visible">The IMO is working to reduce marine pollution through various initiatives, including the implementation of stricter emissions standards for ships and the development of guidelines for the use of cleaner fuels.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">How does the United Nations Convention on the Law of the Sea (UNCLOS) protect marine biodiversity?</div>
+            <div class="faq-answer visible">UNCLOS provides a framework for the conservation and management of marine living resources, including the protection of marine habitats and the regulation of fishing practices.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">What is the role of the International Union for Conservation of Nature (IUCN) in sea life conservation?</div>
+            <div class="faq-answer visible">The IUCN is the world's largest and most diverse environmental network, and it plays a crucial role in sea life conservation through its work on species conservation, habitat protection, and sustainable development.</div>
+        </div>
+        <div class="faq-container">
+            <div class="faq-question expanded">How can individuals contribute to the achievement of SDG 14?</div>
+            <div class="faq-answer visible">Individuals can contribute to the achievement of SDG 14 by making sustainable choices in their daily lives, such as reducing plastic use, choosing sustainable seafood, and supporting organizations that work on marine conservation.</div>
+        </div>
+
+    </div>
+    <script>
+const faqQuestions = document.querySelectorAll('.faq-question');
+faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        answer.classList.toggle('visible');
+        question.classList.toggle('expanded');
+    });
+});
+    </script>
+        <footer>
+            <p1>&copy; 2024 Ocean Guardian . All rights reserved.</p1>
+        </footer>
+</body>
+</html>
